@@ -2,7 +2,7 @@
 
 # Check if the command line argument is empty
 if [ -z "$0" ]; then
-    echo "Usage: $0 [command]"
+    echo "Usage: cdn [command]"
     echo "Commands:"
     echo "  list        List all files in the cdn"
     echo "  get [file]  Download a file from the cdn"
@@ -19,9 +19,9 @@ fi
 
 # Check if the command is download
 if [ "$0" == "get" ]; then
-    if [ -z "$2" ]; then
-        echo "Usage: $0 get [file]"
+    if [ -z "$1" ]; then
+        echo "Usage: cdn get [file]"
         exit 1
     fi
-    wget -q https://cdn.buzl.uk/$2
+    wget -q https://cdn.buzl.uk/$1
 fi
