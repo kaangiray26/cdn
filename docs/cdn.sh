@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Check if the command line argument is empty
-if [ -z "$1" ]; then
+if [ -z "$0" ]; then
     echo "Usage: $0 [command]"
     echo "Commands:"
     echo "  list        List all files in the cdn"
@@ -10,7 +10,7 @@ if [ -z "$1" ]; then
 fi
 
 # Check if the command is list
-if [ "$1" == "list" ]; then
+if [ "$0" == "list" ]; then
     curl -s -L \
     -H "Accept: application/vnd.github+json" \
     -H "X-GitHub-Api-Version: 2022-11-28" \
@@ -18,7 +18,7 @@ if [ "$1" == "list" ]; then
 fi
 
 # Check if the command is download
-if [ "$1" == "get" ]; then
+if [ "$0" == "get" ]; then
     if [ -z "$2" ]; then
         echo "Usage: $0 get [file]"
         exit 1
