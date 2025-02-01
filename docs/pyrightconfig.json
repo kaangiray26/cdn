@@ -1,0 +1,11 @@
+{
+    "reportDuplicateImport": true,
+    "reportUnusedImport": true,
+    "reportUnusedClass": true,
+    "reportUnusedFunction": true,
+    "reportUnusedVariable": true,
+    "reportUnusedCallResult": true,
+    "reportUnusedCoroutine": true,
+    "reportUnusedExcept": true,
+    "reportUnusedExpression": true
+}
